@@ -1,7 +1,10 @@
 #!/bin/bash
 # Bash script to rotate MongoDB log files
 # Author: Anban Malarvendan
-# The script can be used by anyone under the condition that it must always carry the original author's name at all times.
+# License: GNU GENERAL PUBLIC LICENSE Version 3 + 
+#          Sectoion 7: Redistribution/Reuse of this code is permitted under the 
+#          GNU v3 license, as an additional term ALL code must carry the 
+#          original Author(s) credit in comment form.
 
 # MongoDB credentials and settings
 MONGODB_USERNAME="user_logrotate"
