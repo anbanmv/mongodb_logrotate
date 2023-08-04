@@ -30,7 +30,7 @@ if [[ $LOG_FILE_SIZE -ge 2 ]]; then
         echo "db.runCommand({ logRotate: 1 })" | mongo -u $MONGODB_USERNAME -p $MONGODB_PASSWORD admin --quiet --port $MONGODB_PORT > /dev/null 2>&1
         if [[ $? -ne 0 ]]; then
             # Send email notification if log rotation fails
-            printf "ERROR: LOG ROTATION HAS FAILED\nCURRENT LOG SIZE IS ${LOG_FILE_SIZE} MB\nPLEASE CHECK" | mailx -r root@clientname.com -s "LOGROTATE FAILED IN SERVER_NAME" dba_groupemail@company.com
+            printf "ERROR: LOG ROTATION HAS FAILED\nCURRENT LOG SIZE IS ${LOG_FILE_SIZE} MB\nPLEASE CHECK" | mailx -r root@clientname.com -s "LOGROTATE FAILED IN SERVER_NAME" support_dba@domain.com
             exit
         fi
     fi
